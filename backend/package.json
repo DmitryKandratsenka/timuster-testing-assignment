@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "fastify": "^4.27.0",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "cross-env PORT=3001 nodemon index.js",
+    "migrations:run": "npx knex --knexfile ./src/db/index.js migrate:latest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}
